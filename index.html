@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Recados</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center mb-4">
+                    <h1>
+                        Sistema de Recados
+                    </h1>
+                    <p>Organize suas mensagens de forma prática e eficiente</p>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="mb-0">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Novo Recado
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="formRecado">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="remetente" class="form-label">
+                                        Quem deixou o recado *
+                                    </label>
+                                    <input type="text" class="form-control" id="remetente" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, informe quem está deixando o recado.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="destinatario" class="form-label">
+                                        Para quem é o recado *
+                                    </label>
+                                    <input type="text" class="form-control" id="destinatario" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, informe o destinatário do recado.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">
+                                    Mensagem *
+                                </label>
+                                <textarea class="form-control" id="mensagem" rows="3" required placeholder="Digite sua mensagem aqui..."></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, digite a mensagem do recado.
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Salvar Recado
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">
+                            Recados Salvos
+                        </h3>
+                    </div>
+                    <div class="card-body" id="listaRecados">
+                        <div>
+                            <h4>Nenhum recado encontrado</h4>
+                            <p>Adicione seu primeiro recado usando o formulário acima.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/index.js"></script>
+</body>
+</html>
